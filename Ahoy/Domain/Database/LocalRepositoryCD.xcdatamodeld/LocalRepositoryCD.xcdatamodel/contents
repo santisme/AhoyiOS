@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CreatedByCD" representedClassName="CreatedByCD" syncable="YES" codeGenerationType="class">
+        <relationship name="topicDetails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TopicDetailsCD" inverseName="createdBy" inverseEntity="TopicDetailsCD"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCD" inverseName="createdBy" inverseEntity="UserCD"/>
+    </entity>
+    <entity name="DiscourseCategoryCD" representedClassName="DiscourseCategoryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="textColor" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PostCD" representedClassName="PostCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplate" optional="YES" attributeType="String"/>
+        <attribute name="blurb" optional="YES" attributeType="String"/>
+        <attribute name="cooked" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="raw" optional="YES" attributeType="String"/>
+        <attribute name="topicId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="postStream" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostStreamCD" inverseName="posts" inverseEntity="PostStreamCD"/>
+    </entity>
+    <entity name="PosterCD" representedClassName="PosterCD" syncable="YES" codeGenerationType="class">
+        <attribute name="posterDescription" optional="YES" attributeType="String"/>
+        <relationship name="topic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TopicCD" inverseName="posters" inverseEntity="TopicCD"/>
+        <relationship name="userId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCD" inverseName="poster" inverseEntity="UserCD"/>
+    </entity>
+    <entity name="PostStreamCD" representedClassName="PostStreamCD" syncable="YES" codeGenerationType="class">
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PostCD" inverseName="postStream" inverseEntity="PostCD"/>
+        <relationship name="singleTopic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicCD" inverseName="postStream" inverseEntity="TopicCD"/>
+    </entity>
+    <entity name="TopicCD" representedClassName="TopicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="archetype" optional="YES" attributeType="String"/>
+        <attribute name="bumped" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="postsCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="views" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="posters" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PosterCD" inverseName="topic" inverseEntity="PosterCD"/>
+        <relationship name="postStream" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PostStreamCD" inverseName="singleTopic" inverseEntity="PostStreamCD"/>
+        <relationship name="topicDetails" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TopicDetailsCD" inverseName="topic" inverseEntity="TopicDetailsCD"/>
+    </entity>
+    <entity name="TopicDetailsCD" representedClassName="TopicDetailsCD" syncable="YES" codeGenerationType="class">
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CreatedByCD" inverseName="topicDetails" inverseEntity="CreatedByCD"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicCD" inverseName="topicDetails" inverseEntity="TopicCD"/>
+    </entity>
+    <entity name="UserAvatarCD" representedClassName="UserAvatarCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplateImage" optional="YES" attributeType="Binary"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserCD" representedClassName="UserCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplate" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastSeenAt" optional="YES" attributeType="String"/>
+        <attribute name="logged" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="moderator" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedByCD" inverseName="user" inverseEntity="CreatedByCD"/>
+        <relationship name="poster" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PosterCD" inverseName="userId" inverseEntity="PosterCD"/>
+    </entity>
+    <elements>
+        <element name="CreatedByCD" positionX="-81" positionY="-432" width="128" height="73"/>
+        <element name="DiscourseCategoryCD" positionX="-82.171875" positionY="-217.8359375" width="128" height="103"/>
+        <element name="PostCD" positionX="133.16796875" positionY="-191.9765625" width="128" height="208"/>
+        <element name="PosterCD" positionX="-268.515625" positionY="-364.71484375" width="128" height="88"/>
+        <element name="PostStreamCD" positionX="127.09765625" positionY="-400.2265625" width="128" height="73"/>
+        <element name="TopicCD" positionX="-73.26171875" positionY="-586.3984375" width="128" height="208"/>
+        <element name="TopicDetailsCD" positionX="-72" positionY="-423" width="128" height="73"/>
+        <element name="UserAvatarCD" positionX="-90" positionY="-441" width="128" height="73"/>
+        <element name="UserCD" positionX="-289.90234375" positionY="-193.140625" width="128" height="178"/>
+    </elements>
+</model>

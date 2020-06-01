@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "AhoyManageObjectModels">
+      <FileRef
+         location = "group:AhoyManageObjectModels/UserAvatarCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/UserAvatarCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PosterCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PosterCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/TopicCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/TopicCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/TopicDetailsCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/TopicDetailsCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PostCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PostCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/DiscourseCategoryCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/DiscourseCategoryCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PostStreamCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/PostStreamCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/UserCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/UserCD+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/CreatedByCD+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AhoyManageObjectModels/CreatedByCD+CoreDataProperties.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Ahoy.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

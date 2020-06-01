@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Ahoy" customModuleProvider="target">
+            <connections>
+                <outlet property="password" destination="hFd-ae-iB2" id="XQ3-J2-Oyf"/>
+                <outlet property="scrollView" destination="xer-cC-xMw" id="X5E-rN-RFA"/>
+                <outlet property="username" destination="eIc-lq-Bfw" id="79e-cK-dnZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="xer-cC-xMw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-Vc-3JR" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="599"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahoyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ixW-nj-5Xw">
+                                    <rect key="frame" x="32" y="24" width="350" height="163"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="eIc-lq-Bfw" customClass="DesignableTextField" customModule="Ahoy" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="315" width="366" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="underline" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                            <color key="value" name="ahoyGray"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="usernameEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="d2c-NU-HK0"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hFd-ae-iB2" customClass="DesignableTextField" customModule="Ahoy" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="371" width="366" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="send" secureTextEntry="YES" textContentType="password"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="underline" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                            <color key="value" name="ahoyGray"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="passwordEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="Lcy-5k-JVK"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-HZ-SEk" customClass="DesignableButton" customModule="Ahoy" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="443" width="350" height="40"/>
+                                    <state key="normal" title="SignIn"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="secondaryButton" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="buttonHeight">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="mainButton" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="signInClicked:" destination="-1" eventType="touchUpInside" id="H9K-Pa-khY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTV-Jh-ZX6" customClass="DesignableButton" customModule="Ahoy" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="499" width="350" height="32"/>
+                                    <state key="normal" title="SignUp"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="secondaryButton" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="signUpClicked:" destination="-1" eventType="touchUpInside" id="vT0-68-02s"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-Mj-eBa" customClass="DesignableButton" customModule="Ahoy" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="547" width="350" height="32"/>
+                                    <state key="normal" title="Password recovery"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="secondaryButton" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="passwordRecoveryClicked:" destination="-1" eventType="touchUpInside" id="Ip4-0C-qF6"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="ahoyMainBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="eIc-lq-Bfw" secondAttribute="trailing" constant="24" id="1o9-4B-U16">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstAttribute="trailing" secondItem="hFd-ae-iB2" secondAttribute="trailing" constant="24" id="2CF-zV-H2r">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstItem="ixW-nj-5Xw" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="32" id="BtZ-zB-Umt">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstItem="cTV-Jh-ZX6" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="32" id="C1b-K0-YDF">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                                <constraint firstAttribute="trailing" secondItem="yeb-HZ-SEk" secondAttribute="trailing" constant="32" id="Joe-Ov-45v">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                                <constraint firstItem="G6P-Mj-eBa" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="32" id="Mho-6a-Get">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                                <constraint firstItem="eIc-lq-Bfw" firstAttribute="top" secondItem="ixW-nj-5Xw" secondAttribute="bottom" constant="128" id="Mwz-df-aWv">
+                                    <variation key="heightClass=compact-widthClass=regular" constant="24"/>
+                                </constraint>
+                                <constraint firstItem="hFd-ae-iB2" firstAttribute="top" secondItem="eIc-lq-Bfw" secondAttribute="bottom" constant="16" id="N7A-Lh-LmE"/>
+                                <constraint firstAttribute="trailing" secondItem="ixW-nj-5Xw" secondAttribute="trailing" constant="32" id="VVu-nz-1zh">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstItem="G6P-Mj-eBa" firstAttribute="top" secondItem="cTV-Jh-ZX6" secondAttribute="bottom" constant="16" id="cgH-tW-aZg"/>
+                                <constraint firstItem="yeb-HZ-SEk" firstAttribute="top" secondItem="hFd-ae-iB2" secondAttribute="bottom" constant="32" id="ejd-jI-uhh"/>
+                                <constraint firstItem="yeb-HZ-SEk" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="32" id="lnp-Cd-5el">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                                <constraint firstItem="ixW-nj-5Xw" firstAttribute="top" secondItem="wT8-Vc-3JR" secondAttribute="top" constant="24" id="lra-el-3pS"/>
+                                <constraint firstItem="hFd-ae-iB2" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="24" id="nwn-U0-tMM">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstItem="cTV-Jh-ZX6" firstAttribute="top" secondItem="yeb-HZ-SEk" secondAttribute="bottom" constant="16" id="o3d-Bd-RJ9"/>
+                                <constraint firstAttribute="bottom" secondItem="G6P-Mj-eBa" secondAttribute="bottom" constant="20" id="omj-SM-SB0"/>
+                                <constraint firstAttribute="trailing" secondItem="G6P-Mj-eBa" secondAttribute="trailing" constant="32" id="pLv-ES-bYr">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                                <constraint firstItem="eIc-lq-Bfw" firstAttribute="leading" secondItem="wT8-Vc-3JR" secondAttribute="leading" constant="24" id="pSu-yk-BtG">
+                                    <variation key="widthClass=regular" constant="72"/>
+                                </constraint>
+                                <constraint firstAttribute="trailing" secondItem="cTV-Jh-ZX6" secondAttribute="trailing" constant="32" id="t0S-UD-KYz">
+                                    <variation key="widthClass=regular" constant="88"/>
+                                </constraint>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="wT8-Vc-3JR" firstAttribute="leading" secondItem="xLH-h9-CJD" secondAttribute="leading" id="5Io-a5-R4t"/>
+                        <constraint firstItem="wT8-Vc-3JR" firstAttribute="width" secondItem="gm5-92-8NL" secondAttribute="width" id="BC1-pk-Zf1"/>
+                        <constraint firstItem="wT8-Vc-3JR" firstAttribute="height" secondItem="gm5-92-8NL" secondAttribute="height" id="Y7i-8X-Bq3"/>
+                        <constraint firstItem="wT8-Vc-3JR" firstAttribute="top" secondItem="gm5-92-8NL" secondAttribute="top" id="nX2-HB-cC5"/>
+                        <constraint firstItem="xLH-h9-CJD" firstAttribute="trailing" secondItem="wT8-Vc-3JR" secondAttribute="trailing" id="zSO-mY-pEK"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="gm5-92-8NL"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="xLH-h9-CJD"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="ahoyMainBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xer-cC-xMw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DRO-vN-esM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xer-cC-xMw" secondAttribute="bottom" id="Hvk-jb-3PU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xer-cC-xMw" secondAttribute="trailing" id="mxd-Rv-Mja"/>
+                <constraint firstItem="xer-cC-xMw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xhM-nZ-zD4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ahoyLogo" width="271" height="163"/>
+        <namedColor name="ahoyGray">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyMainBackgroundColor">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProDisplay-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+        <array key="SFProDisplay-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" rowHeight="449" id="KGk-i7-Jjw" customClass="PostListHeaderCell" customModule="Ahoy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="449"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="449"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DB-BN-IWL" userLabel="TopView">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="327"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQH-4V-86w">
+                                <rect key="frame" x="18" y="24" width="54" height="26"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" name="ahoyMainTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tKE-4P-5Rz">
+                                <rect key="frame" x="18" y="56.5" width="27.5" height="18"/>
+                                <color key="tintColor" name="ahoyGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="DCI-u8-8ir"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-dq-n2Q">
+                                <rect key="frame" x="96" y="57.5" width="22" height="15.5"/>
+                                <color key="tintColor" name="ahoyGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="CTo-Ug-nYK"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GpS-9f-56v">
+                                <rect key="frame" x="168.5" y="57" width="25.5" height="16"/>
+                                <color key="tintColor" name="ahoyGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="9mF-HF-dNj"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdj-vZ-qM0" userLabel="ViewCount">
+                                <rect key="frame" x="122" y="56.5" width="34.5" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="ahoyGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MJ-rI-TFs" userLabel="UpdatedAt">
+                                <rect key="frame" x="198" y="56.5" width="34.5" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="ahoyGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swg-3M-H6A">
+                                <rect key="frame" x="18" y="94" width="397" height="19"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <color key="textColor" name="ahoyMainTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-sS-ek8" userLabel="PostCount">
+                                <rect key="frame" x="49.5" y="56.5" width="34.5" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="ahoyGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CQH-4V-86w" secondAttribute="trailing" constant="18" id="1wG-eE-fjV"/>
+                            <constraint firstItem="0MJ-rI-TFs" firstAttribute="leading" secondItem="GpS-9f-56v" secondAttribute="trailing" constant="4" id="5cN-XQ-k6c"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Swg-3M-H6A" secondAttribute="trailing" constant="18" id="72V-Z6-GCk"/>
+                            <constraint firstItem="tKE-4P-5Rz" firstAttribute="top" secondItem="CQH-4V-86w" secondAttribute="bottom" constant="8" id="CIy-Kk-wC9"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Swg-3M-H6A" secondAttribute="bottom" constant="24" id="HHS-AL-HVm"/>
+                            <constraint firstItem="zxa-sS-ek8" firstAttribute="leading" secondItem="tKE-4P-5Rz" secondAttribute="trailing" constant="4" id="HNd-sG-FHM"/>
+                            <constraint firstItem="CQH-4V-86w" firstAttribute="leading" secondItem="1DB-BN-IWL" secondAttribute="leading" constant="18" id="ND2-V9-YUv"/>
+                            <constraint firstItem="0MJ-rI-TFs" firstAttribute="centerY" secondItem="tKE-4P-5Rz" secondAttribute="centerY" id="Ngg-0B-OtU"/>
+                            <constraint firstItem="GpS-9f-56v" firstAttribute="centerY" secondItem="tKE-4P-5Rz" secondAttribute="centerY" id="Qxd-v8-jDj"/>
+                            <constraint firstItem="fdj-vZ-qM0" firstAttribute="centerY" secondItem="tKE-4P-5Rz" secondAttribute="centerY" id="TZG-HO-55t"/>
+                            <constraint firstItem="zxa-sS-ek8" firstAttribute="centerY" secondItem="tKE-4P-5Rz" secondAttribute="centerY" id="TnR-mI-J5k"/>
+                            <constraint firstItem="Jws-dq-n2Q" firstAttribute="centerY" secondItem="tKE-4P-5Rz" secondAttribute="centerY" id="UHh-gF-ec0"/>
+                            <constraint firstItem="GpS-9f-56v" firstAttribute="leading" secondItem="fdj-vZ-qM0" secondAttribute="trailing" constant="12" id="erd-IM-hLI"/>
+                            <constraint firstItem="CQH-4V-86w" firstAttribute="top" secondItem="1DB-BN-IWL" secondAttribute="top" constant="24" id="frb-bs-MtL"/>
+                            <constraint firstItem="fdj-vZ-qM0" firstAttribute="leading" secondItem="Jws-dq-n2Q" secondAttribute="trailing" constant="4" id="g2x-0s-obE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0MJ-rI-TFs" secondAttribute="trailing" constant="18" id="lhN-J1-kYK"/>
+                            <constraint firstItem="Swg-3M-H6A" firstAttribute="top" secondItem="tKE-4P-5Rz" secondAttribute="bottom" constant="22" id="lmw-5s-2XK"/>
+                            <constraint firstItem="Swg-3M-H6A" firstAttribute="leading" secondItem="1DB-BN-IWL" secondAttribute="leading" constant="18" id="sgF-c9-Vws"/>
+                            <constraint firstItem="Jws-dq-n2Q" firstAttribute="leading" secondItem="zxa-sS-ek8" secondAttribute="trailing" constant="12" id="uxA-IZ-YqU"/>
+                            <constraint firstItem="tKE-4P-5Rz" firstAttribute="leading" secondItem="CQH-4V-86w" secondAttribute="leading" id="zN4-Cu-KfG"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WT6-iK-0Dn" userLabel="BottomView" customClass="DesignableView" customModule="Ahoy" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="327" width="442" height="122"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suit.heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iAy-K4-Ql0" customClass="DesignableImageView" customModule="Ahoy" customModuleProvider="target">
+                                <rect key="frame" x="201" y="-10.5" width="40" height="37.5"/>
+                                <color key="backgroundColor" name="ahoyGrooup2ViewColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Aa4-5W-I2b"/>
+                                    <constraint firstAttribute="height" constant="40" id="fHQ-5f-yhH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-mu-wRo" customClass="DesignableImageView" customModule="Ahoy" customModuleProvider="target">
+                                <rect key="frame" x="273" y="-9" width="40" height="33"/>
+                                <color key="backgroundColor" name="ahoyGrooup2ViewColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UBj-Jx-moP">
+                                <rect key="frame" x="18" y="40" width="424" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HK5-8d-NPg"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3iF-zq-gKb">
+                                    <size key="itemSize" width="64" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH8-4y-sPv" userLabel="bubbleButton" customClass="DesignableButton" customModule="Ahoy" customModuleProvider="target">
+                                <rect key="frame" x="129" y="-8" width="40" height="32"/>
+                                <color key="backgroundColor" name="ahoyGrooup2ViewColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="SrR-Yi-LG4"/>
+                                    <constraint firstAttribute="width" constant="40" id="kXn-Jf-pze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="bubble.left" catalog="system"/>
+                                <state key="selected" backgroundImage="bubble.left.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mk0-db-4Sl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="ahoyGrooup2ViewColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UBj-Jx-moP" secondAttribute="trailing" id="0Du-nW-Jjn"/>
+                            <constraint firstItem="iAy-K4-Ql0" firstAttribute="leading" secondItem="RH8-4y-sPv" secondAttribute="trailing" constant="32" id="1sE-Ie-4fT"/>
+                            <constraint firstItem="iEr-mu-wRo" firstAttribute="height" secondItem="RH8-4y-sPv" secondAttribute="height" id="GYb-iN-xuu"/>
+                            <constraint firstAttribute="bottom" secondItem="UBj-Jx-moP" secondAttribute="bottom" constant="12" id="Imy-79-yJN"/>
+                            <constraint firstItem="iAy-K4-Ql0" firstAttribute="top" secondItem="WT6-iK-0Dn" secondAttribute="top" constant="-12" id="JpC-AP-FSv"/>
+                            <constraint firstItem="iEr-mu-wRo" firstAttribute="width" secondItem="iAy-K4-Ql0" secondAttribute="width" id="RoY-e1-JtA"/>
+                            <constraint firstItem="iEr-mu-wRo" firstAttribute="centerY" secondItem="iAy-K4-Ql0" secondAttribute="centerY" id="XJT-nd-Sz5"/>
+                            <constraint firstItem="UBj-Jx-moP" firstAttribute="top" secondItem="iAy-K4-Ql0" secondAttribute="bottom" constant="12" id="bsd-Ue-8ae"/>
+                            <constraint firstItem="UBj-Jx-moP" firstAttribute="leading" secondItem="WT6-iK-0Dn" secondAttribute="leading" constant="18" id="hV7-d3-11e"/>
+                            <constraint firstItem="iEr-mu-wRo" firstAttribute="leading" secondItem="iAy-K4-Ql0" secondAttribute="trailing" constant="32" id="izo-NB-L8P"/>
+                            <constraint firstItem="iAy-K4-Ql0" firstAttribute="centerX" secondItem="WT6-iK-0Dn" secondAttribute="centerX" id="zo6-Ij-ksK"/>
+                            <constraint firstItem="RH8-4y-sPv" firstAttribute="centerY" secondItem="iAy-K4-Ql0" secondAttribute="centerY" id="zxF-Zx-E6e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="ahoyMainBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="WT6-iK-0Dn" secondAttribute="trailing" id="ANz-2M-8dJ"/>
+                    <constraint firstAttribute="trailing" secondItem="1DB-BN-IWL" secondAttribute="trailing" id="OMl-L3-jGB"/>
+                    <constraint firstItem="1DB-BN-IWL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TMz-4n-f55"/>
+                    <constraint firstItem="WT6-iK-0Dn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ypc-34-Pvj"/>
+                    <constraint firstAttribute="bottom" secondItem="WT6-iK-0Dn" secondAttribute="bottom" id="hZd-mq-rqd"/>
+                    <constraint firstItem="1DB-BN-IWL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vJi-gs-ZSf"/>
+                    <constraint firstItem="WT6-iK-0Dn" firstAttribute="top" secondItem="1DB-BN-IWL" secondAttribute="bottom" id="zVW-6x-FMR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="postersCollectionView" destination="UBj-Jx-moP" id="QQq-GO-DgV"/>
+                <outlet property="postsCountLabel" destination="zxa-sS-ek8" id="FzR-6h-UDz"/>
+                <outlet property="topicTextLabel" destination="Swg-3M-H6A" id="7ET-QG-GDs"/>
+                <outlet property="topicTitleLabel" destination="CQH-4V-86w" id="6h7-0H-rh1"/>
+                <outlet property="updatedAtLabel" destination="0MJ-rI-TFs" id="Eze-Gs-qdw"/>
+                <outlet property="viewCountLabel" destination="fdj-vZ-qM0" id="Ilh-Ni-9k9"/>
+            </connections>
+            <point key="canvasLocation" x="19" y="24"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bubble.left" catalog="system" width="128" height="110"/>
+        <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <namedColor name="ahoyGray">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyGrooup2ViewColor">
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyMainBackgroundColor">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyMainTextColor">
+            <color red="0.035000000149011612" green="0.035000000149011612" blue="0.035000000149011612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

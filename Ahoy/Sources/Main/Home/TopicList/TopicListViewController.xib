@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopicListViewController" customModule="Ahoy" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="Dfc-IE-sil" id="Z7P-Jo-bGJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-IE-sil">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <inset key="separatorInset" minX="92" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ih-SM-jAd" userLabel="AddTopic" customClass="DesignableButton" customModule="Ahoy" customModuleProvider="target">
+                    <rect key="frame" x="342" y="794" width="56" height="56"/>
+                    <color key="backgroundColor" name="ahoyLigthBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="SxZ-5B-gv6"/>
+                        <constraint firstAttribute="height" constant="56" id="ptr-yz-t1L"/>
+                    </constraints>
+                    <color key="tintColor" name="ahoyWhite"/>
+                    <state key="normal" image="square.and.pencil" catalog="system">
+                        <color key="titleColor" name="ahoyMainTextColor"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="27"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="mainButton" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topicFilterButton" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="secondaryButton" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="newTopicClicked:" destination="-1" eventType="touchUpInside" id="5VX-do-Jn6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="ahoyMainBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dfc-IE-sil" secondAttribute="trailing" id="1dc-tm-WE6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Ih-SM-jAd" secondAttribute="bottom" constant="12" id="7l3-zk-DFQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dfc-IE-sil" secondAttribute="bottom" id="YpH-OM-PQb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Ih-SM-jAd" secondAttribute="trailing" constant="16" id="eaE-5E-MKP"/>
+                <constraint firstItem="Dfc-IE-sil" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ezS-0W-rMq"/>
+                <constraint firstItem="Dfc-IE-sil" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kxy-zE-hq9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <namedColor name="ahoyLigthBlue">
+            <color red="0.0" green="0.5690000057220459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyMainBackgroundColor">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyMainTextColor">
+            <color red="0.035000000149011612" green="0.035000000149011612" blue="0.035000000149011612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ahoyWhite">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
